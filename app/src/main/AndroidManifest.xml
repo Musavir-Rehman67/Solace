@@ -13,15 +13,6 @@
             android:name=".report"
             android:exported="true" />
         <activity
-            android:name=".Symptoms"
-            android:exported="true" />
-        <activity
-            android:name=".StayWellStratigies"
-            android:exported="true" />
-        <activity
-            android:name=".Triggers"
-            android:exported="true" />
-        <activity
             android:name=".SignUp"
             android:exported="true" />
         <activity

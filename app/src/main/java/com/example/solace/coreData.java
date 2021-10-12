@@ -231,7 +231,7 @@ public class coreData extends AppCompatActivity {
               //new activity and sendind data to other activity
 
 
-                Intent intent = new Intent(coreData.this, StayWellStratigies.class);
+                Intent intent = new Intent(coreData.this, report.class);
                 intent.putExtra("core",(Serializable) core);
                 intent.putExtra("date", date);
 

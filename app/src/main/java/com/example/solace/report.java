@@ -79,9 +79,6 @@ public class report extends AppCompatActivity {
 
         Intent intent = getIntent();
         HashMap<String, String> core = (HashMap<String, String>) intent.getSerializableExtra("core");
-        HashMap<String, String> SWS = (HashMap<String, String>) intent.getSerializableExtra("sws");
-        HashMap<String, String> symptoms = (HashMap<String, String>) intent.getSerializableExtra("symptoms");
-        HashMap<String, String> triggers = (HashMap<String, String>) intent.getSerializableExtra("triggers");
         String date = intent.getStringExtra("date");
 
 

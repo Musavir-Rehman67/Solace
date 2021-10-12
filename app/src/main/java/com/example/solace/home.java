@@ -34,6 +34,8 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
         homeNext = findViewById(R.id.homenext);
 
         date = findViewById(R.id.date);
