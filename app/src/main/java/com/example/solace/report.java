@@ -184,4 +184,40 @@ public class report extends AppCompatActivity {
             }
         });
     }
+    
+    //Method to show Bar
+    private void showBarChart(BarChart barChart//barChart Id){
+        ArrayList<Double> valueList = new ArrayList<Double>();
+        ArrayList<BarEntry> entries = new ArrayList<>();
+        String title = "Title";
+
+        //input data
+        for(int i = 0; i < 6; i++){
+            valueList.add(i * 100.1);
+        }
+
+        //fit the data into a bar
+        for (int i = 0; i < valueList.size(); i++) {
+            BarEntry barEntry = new BarEntry(i, valueList.get(i).floatValue());
+            entries.add(barEntry);
+        }
+
+        final ArrayList<String> xAxisLabel = new ArrayList<>();
+        xAxisLabel.add("1-Jan-18");
+        xAxisLabel.add("2-Feb-19");
+        xAxisLabel.add("3-Sept-20");
+        xAxisLabel.add("4-Dec-21");
+
+        barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xAxisLabel));
+
+        BarDataSet barDataSet = new BarDataSet(entries, title);
+        //change the position of x-axis to the bottom
+        barChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+
+        BarData data = new BarData(barDataSet);
+        barChart.setData(data);
+        barChart.invalidate();
+    }
+    
+    
 }
